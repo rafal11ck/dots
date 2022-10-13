@@ -46,7 +46,7 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod] ,"f", lazy.window.toggle_fullscreen(), desc="Set current window to fullscreen"),
-    Key([], "Print", lazy.spawn("flameshoot gui"), desc="Spawn screenshoot utility"),
+    Key([mod], "p", lazy.spawn("dmenu_run"), desc="Spawn screenshoot utility"),
     Key([], "XF86Tools", lazy.spawn("firefox"), desc="Spawn screenshoot utility")
 ]
 
