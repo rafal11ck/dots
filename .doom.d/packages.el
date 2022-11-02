@@ -50,3 +50,5 @@
 ;(unpin! t)
 
 (package! cdlatex)
+(package! gnuplot)
+(package! gnuplot-mode)
