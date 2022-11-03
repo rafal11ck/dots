@@ -77,3 +77,5 @@
 
 
 (add-hook 'org-mode-hook #'turn-on-org-cdlatex)
+
+(setq doom-font "Liberation Mono:pixelsize=12" )
