@@ -1,0 +1,8 @@
+# best audio and video
+-f ba+bv
+#embed chapters
+--embed-chapters
+#embed subs
+--embed-subs
+#subs languages
+--sub-lang en+pl
