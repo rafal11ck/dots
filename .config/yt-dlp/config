@@ -2,7 +2,8 @@
 -f ba+bv
 #embed chapters
 --embed-chapters
+#subs languages
+--sub-lang en
+--sub-lang pl
 #embed subs
 --embed-subs
-#subs languages
---sub-lang en+pl

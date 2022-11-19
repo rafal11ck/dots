@@ -1,17 +1,13 @@
-#
-# ~/.bashrc
-#
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=1000
+unsetopt autocd beep extendedglob
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/rafal/.zshrc'
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
-alias rmv="rsync --remove-source-files --progress --recursive"
-export PATH="$PATH:/home/rafal/.emacs.d/bin:/home/rafal/.local/bin/:"
-alias vpntohome="doas tailscale up --exit-node=letmein-vm --accept-routes"
-alias config="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
-export EDIOTR="emacsclinet -c"
-export VISUAL="emacsclient -c"
-
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket" #needs ssh agent service from .config/systemd/ssh-agent.service as user
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
