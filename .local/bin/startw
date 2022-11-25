@@ -1,31 +1,22 @@
 #!/bin/sh
+export SDL_VIDEODRIVER=wayland
+export _JAVA_AWT_WM_NONREPARENTING=1
 
-cd ~
-
-export _JAVA_AWT_WM_NOOREPARENTING=1
-export XCURSOR_SIZE=24
-
-export XDG_CURRENT_DESKTOP=hyperland
-export XDG_SESSION_DESKTOP=hyperland
-export XDG_CURRENT_SESSION_TYPE=hyperland
+export XDG_CURRENT_DESKTOP=hyprland
+export XDG_SESSION_DESKTOP=hyprland
+export XDG_CURRENT_SESSION_TYPE=wayland
 
 export GDK_BACKEND="wayland,x11"
 export MOZ_ENABLE_WAYLAND=1
 
-export QT_PLUGIN_PATH=/usr/lib/qt/plugins
+export QT_PLUGIN_PATH=/usr/lib/qt/plugins/
 export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
-export QT_QPA_PLATFORM="wayland;xcb"
-export QT_QPAPLATFORMTHEME="qt5ct"
+export QT_QPA_PLATFORM=wayland;xcb
+export QT_QPA_PLATFORMTHEME=qt5ct 
 
-#fix jellyfin
-#export QT_QPA_PLATFORM="wayland-egl"
-
-#Nvidia stuff
-export GBM_BACKEND=nvidia-drm
-export LIBVA_DRIVER_NAME=nvidia
-export XDG_SESSION_TYPE=wayland
 export GBM_BACKEND=nvidia-drm
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
-export WLR_NO_HARDWARE_CURSORS=1
+export LIBVA_DRIVER_NAME=nvidia
+#export __GL_SYNC_DISPLAY_DEVICE=eDP-1
 
 exec Hyprland
