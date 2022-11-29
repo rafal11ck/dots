@@ -2,8 +2,6 @@
 # ~/.bashrc
 #
 
-export PATH="$PATH:/home/rafal/.emacs.d/bin:/home/rafal/.local/bin/:~/.scripts/desktop:~/.scripts/wayland"
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket" #needs ssh agent service from .config/systemd/ssh-agent.service as user
 
 alias ls='ls --color=auto'
 alias rmv="rsync --remove-source-files --progress --recursive"
@@ -12,3 +10,6 @@ alias vpntohome="doas tailscale up --exit-node=letmein-vm --accept-routes"
 
 export VISUAL="emacsclient -c"
 export EDIOTR="emacsclinet -c"
+
+export PATH="$PATH:/home/rafal/.emacs.d/bin:/home/rafal/.local/bin/:~/.scripts/desktop:~/.scripts/wayland"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket" #needs ssh agent service from .config/systemd/ssh-agent.service as user
