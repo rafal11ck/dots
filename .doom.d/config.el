@@ -82,4 +82,4 @@
 (add-hook 'org-mode-hook #'turn-on-org-cdlatex)
 
 (setq doom-font "Liberation Mono:pixelsize=17" )
-(setq org-latex-with-hyperref nil)
+;(setq org-latex-with-hyperref nil)
