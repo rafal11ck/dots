@@ -48,7 +48,3 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
-
-(package! cdlatex)
-(package! gnuplot)
-(package! gnuplot-mode)
