@@ -8,8 +8,8 @@ alias rmv="rsync --remove-source-files --progress --recursive"
 alias config="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 alias vpntohome="doas tailscale up --exit-node=letmein-vm --accept-routes"
 
-export VISUAL="emacsclient -c"
-export EDIOTR="emacsclinet -c"
+#export VISUAL="emacsclient -c"
+#export EDIOTR="emacsclinet -c"
 
-export PATH="$PATH:/home/rafal/.emacs.d/bin:/home/rafal/.local/bin/:~/.scripts/desktop:~/.scripts/wayland"
+export PATH="$PATH:/home/rafal/.emacs.d/bin:/home/rafal/.local/bin/:~/.scripts/desktop:~/.scripts/wayland:~/.scripts/misc"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket" #needs ssh agent service from .config/systemd/ssh-agent.service as user
