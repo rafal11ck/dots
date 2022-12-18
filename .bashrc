@@ -2,6 +2,7 @@
 # ~/.bashrc
 #
 
+[[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
 alias rmv="rsync --remove-source-files --progress --recursive"
