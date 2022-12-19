@@ -37,10 +37,11 @@
 
 (set-fontset-font "fontset-default" nil (font-spec :size 17 :name "Meterial Icons"))
 
-;(setq doom-font (font-spec :family "Illusion Z" :size 17)
- ;     doom-variable-pitch-font (font-spec :family "Illusion Z" :size 17)
-  ;    doom-big-font (font-spec :family "Illusion Z" :size 24))
+(setq doom-font (font-spec :family "Liberation Mono" :size 20)
+     doom-variable-pitch-font (font-spec :family "Liberation Mono" :size 20)
+     doom-big-font (font-spec :family "Liberation Mono" :size 26))
 
+;(setq doom-font "Liberation Mono:pixelsize=17")
 
 (custom-set-faces
   '(org-level-1 ((t (:inherit outline-1 :height 1.4))))
