@@ -7,6 +7,7 @@
 alias ls='ls --color=auto'
 alias rmv="rsync --remove-source-files --progress --recursive"
 alias config="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+alias configtui="gitui -w ~/ -d ~/dotfiles/"
 alias vpntohome="doas tailscale up --exit-node=letmein-vm --accept-routes"
 
 #export VISUAL="emacsclient -c"
