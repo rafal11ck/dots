@@ -9,7 +9,7 @@ alias rmv="rsync --remove-source-files --progress --recursive"
 alias config="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 alias configtui="gitui -w ~/ -d ~/dotfiles/"
 alias vpntohome="doas tailscale up --exit-node=letmein-vm --accept-routes"
-alias jellyfinmediaplayer="jellyfinmediaplayer --disable-gpu"
+alias jellyfinmediaplayer="setsid jellyfinmediaplayer --disable-gpu > /dev/null"
 
 
 #export VISUAL="emacsclient -c"
