@@ -7,10 +7,13 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket" #needs ssh agent servic
 export GDK_SCALE=2
 export XCURSOR_SIZE=32
 export EDIOTR="nvim"
-complete -cf doas
 
 [[ $- != *i* ]] && return
 
+complete -cf doas
+complete -cf setsid
+
+alias zathura='setsid zathura'
 alias ls='ls --color=auto'
 alias rmv="rsync --remove-source-files --progress --recursive"
 alias config="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
