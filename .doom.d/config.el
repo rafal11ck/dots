@@ -6,7 +6,7 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name ""
+(setq user-full-name "placeholder"
       user-mail-address "invalid@example.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
@@ -132,7 +132,6 @@
   :ensure t
   :config
   (setq  x86-lookup-pdf "~/.config/doom/asm-ref.pdf"))
-
 
 
 
