@@ -10,6 +10,9 @@ export EDIOTR="nvim"
 
 [[ $- != *i* ]] && return
 
+#fzf keybindings
+[[ -x "$(command -v fzf)" ]] && source /usr/share/fzf/key-bindings.bash 
+
 complete -cf doas
 complete -cf setsid
 
