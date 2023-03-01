@@ -133,7 +133,7 @@
   :config
   (setq  x86-lookup-pdf "~/.config/doom/asm-ref.pdf"))
 
-
+(defvar native-comp-deferred-compilation-deny-list nil) ;; fix compilation error
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
