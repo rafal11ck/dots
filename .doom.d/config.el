@@ -104,7 +104,9 @@
 
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((emacs-lisp . t)
+ '((mermaid . t)
+   (scheme . t)
+   (emacs-lisp . t)
    (julia . t)
    (python . t)
    (jupyter . t)))
@@ -150,7 +152,7 @@
     (define-key map (kbd "C-c C-d o") 'mermaid-open-browser)
     (define-key map (kbd "C-c C-d d") 'mermaid-open-doc)
     map))
-
+ (setq ob-mermaid-cli-path "/usr/bin/mmdc")
 
 (defvar native-comp-deferred-compilation-deny-list nil) ;; fix compilation error
 
