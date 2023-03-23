@@ -24,5 +24,7 @@ alias configtui="gitui -w ~/ -d ~/dotfiles/"
 alias vpntohome="doas tailscale up --exit-node=letmein-vm --accept-routes"
 alias jellyfinmediaplayer="setsid jellyfinmediaplayer --disable-gpu > /dev/null"
 
+eval "$(starship init bash)"
+
 #export VISUAL="emacsclient -c"
 
