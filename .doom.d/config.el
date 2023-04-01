@@ -44,10 +44,10 @@
 ;(setq doom-font "Liberation Mono:pixelsize=17")
 
 (custom-set-faces
-  '(org-level-1 ((t (:inherit outline-1 :height 1.4))))
-  '(org-level-2 ((t (:inherit outline-2 :height 1.3))))
-  '(org-level-3 ((t (:inherit outline-3 :height 1.2))))
-  '(org-level-4 ((t (:inherit outline-4 :height 1.1))))
+  '(org-level-1 ((t (:inherit outline-1 :height 1.2))))
+  '(org-level-2 ((t (:inherit outline-2 :height 1.15))))
+  '(org-level-3 ((t (:inherit outline-3 :height 1.1))))
+  '(org-level-4 ((t (:inherit outline-4 :height 1.05))))
   '(org-level-5 ((t (:inherit outline-5 :height 1.0))))
 )
 
@@ -101,7 +101,6 @@
 (set-frame-parameter nil 'alpha-background 85) ; For current frame
 (add-to-list 'default-frame-alist '(alpha-background . 85)) ; For all new frames henceforth
 
-
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((mermaid . t)
@@ -112,9 +111,9 @@
    (jupyter . t)))
 
 ;; accept completion from copilot and fallback to company
-(defun my-tab ()
-  (interactive)
-  ((company-indent-or-complete-common nil)))
+;;(defun my-tab ()
+  ;;(interactive)
+  ;;((company-indent-or-complete-common nil)))
 
 ;; asm stuff
 (use-package! nasm-mode
@@ -155,6 +154,9 @@
  (setq ob-mermaid-cli-path "/usr/bin/mmdc")
 
 (defvar native-comp-deferred-compilation-deny-list nil) ;; fix compilation error
+
+(setq org-format-latex-options (plist-put org-format-latex-options :scale 2.0))
+
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
