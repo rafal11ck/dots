@@ -35,7 +35,7 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type `relative)
 
-(set-fontset-font "fontset-default" nil (font-spec :size 17 :name "Meterial Icons"))
+(set-fontset-font "fontset-default" nil (font-spec :size 14 :name "Meterial Icons"))
 
 (setq doom-font (font-spec :family "Liberation Mono" :size 20)
      doom-variable-pitch-font (font-spec :family "Liberation Mono" :size 20)
@@ -134,6 +134,8 @@
   :config
   (setq  x86-lookup-pdf "~/.config/doom/asm-ref.pdf"))
 
+;;(use-package flycheck-posframe)
+
 (use-package! mermaid-mode)
 (setq mermaid-mode-map
   (let ((map mermaid-mode-map))
@@ -157,6 +159,9 @@
 
 (setq org-format-latex-options (plist-put org-format-latex-options :scale 2.0))
 
+;; to debug with DAP-MODE
+(setq dap-auto-configure-mode t)
+(requires 'dap-cpptools)
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
