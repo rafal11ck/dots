@@ -1,11 +1,11 @@
 #
 # ~/.bashrc
 #
-
 export PATH="$PATH:~/.config/emacs/bin/:/home/rafal/.local/bin/:~/.scripts/desktop:~/.scripts/wayland:~/.scripts/misc"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket" #needs ssh agent service from .config/systemd/ssh-agent.service as user
 export GTK_THEME="Pop-dark"
-export XCURSOR_SIZE=32
+export GTK_ICON_THEME="Papirus-Dark"
+export GTK_SCALE=2
 export EDITOR="emacsclient -nw"
 
 [[ $- != *i* ]] && return
