@@ -5,4 +5,4 @@ if [ "$TTY" = "/dev/tty1" ]; then
 	$HOME/startw -- -keeptty > $XDG_RUNTIME_DIR/startw.log
 fi
 
-. ~/.bashrc
+source ~/.bashrc
