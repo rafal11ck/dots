@@ -159,10 +159,6 @@
 
 (setq org-format-latex-options (plist-put org-format-latex-options :scale 2.0))
 
-;; to debug with DAP-MODE
-;;(setq dap-auto-configure-mode t)
-;;(require 'dap-cpptools)
-
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
