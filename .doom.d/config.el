@@ -35,7 +35,7 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type `relative)
 
-(set-fontset-font "fontset-default" nil (font-spec :size 17 :name "Meterial Icons"))
+(set-fontset-font "fontset-default" nil (font-spec :size 14 :name "Meterial Icons"))
 
 (setq doom-font (font-spec :family "Liberation Mono" :size 20)
      doom-variable-pitch-font (font-spec :family "Liberation Mono" :size 20)
@@ -44,10 +44,10 @@
 ;(setq doom-font "Liberation Mono:pixelsize=17")
 
 (custom-set-faces
-  '(org-level-1 ((t (:inherit outline-1 :height 1.4))))
-  '(org-level-2 ((t (:inherit outline-2 :height 1.3))))
-  '(org-level-3 ((t (:inherit outline-3 :height 1.2))))
-  '(org-level-4 ((t (:inherit outline-4 :height 1.1))))
+  '(org-level-1 ((t (:inherit outline-1 :height 1.2))))
+  '(org-level-2 ((t (:inherit outline-2 :height 1.15))))
+  '(org-level-3 ((t (:inherit outline-3 :height 1.1))))
+  '(org-level-4 ((t (:inherit outline-4 :height 1.05))))
   '(org-level-5 ((t (:inherit outline-5 :height 1.0))))
 )
 
@@ -101,18 +101,19 @@
 (set-frame-parameter nil 'alpha-background 85) ; For current frame
 (add-to-list 'default-frame-alist '(alpha-background . 85)) ; For all new frames henceforth
 
-
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((emacs-lisp . t)
+ '((mermaid . t)
+   (scheme . t)
+   (emacs-lisp . t)
    (julia . t)
    (python . t)
    (jupyter . t)))
 
 ;; accept completion from copilot and fallback to company
-(defun my-tab ()
-  (interactive)
-  ((company-indent-or-complete-common nil)))
+;;(defun my-tab ()
+  ;;(interactive)
+  ;;((company-indent-or-complete-common nil)))
 
 ;; asm stuff
 (use-package! nasm-mode
@@ -133,6 +134,8 @@
   :config
   (setq  x86-lookup-pdf "~/.config/doom/asm-ref.pdf"))
 
+;;(use-package flycheck-posframe)
+
 (use-package! mermaid-mode)
 (setq mermaid-mode-map
   (let ((map mermaid-mode-map))
@@ -150,9 +153,11 @@
     (define-key map (kbd "C-c C-d o") 'mermaid-open-browser)
     (define-key map (kbd "C-c C-d d") 'mermaid-open-doc)
     map))
-
+ (setq ob-mermaid-cli-path "/usr/bin/mmdc")
 
 (defvar native-comp-deferred-compilation-deny-list nil) ;; fix compilation error
+
+(setq org-format-latex-options (plist-put org-format-latex-options :scale 2.0))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
