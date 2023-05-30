@@ -98,6 +98,10 @@
 
 (setq ess-r--no-company-meta t)
 
+;; get rid of clangd trashing files.
+;;(setq lsp-clients-clangd-args "--header-insertion=never")
+
+
 (set-frame-parameter nil 'alpha-background 85) ; For current frame
 (add-to-list 'default-frame-alist '(alpha-background . 85)) ; For all new frames henceforth
 
