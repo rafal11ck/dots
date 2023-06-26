@@ -9,6 +9,8 @@ x-scheme-handler/https=firefox.desktop
 x-scheme-handler/about=firefox.desktop
 x-scheme-handler/unknown=firefox.desktop
 x-scheme-handler/discord-218837120066781184=discord-218837120066781184.desktop
+text/plain=emacsclient.desktop
+inode/directory=pcmanfm.desktop
 
 [Added Associations]
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop;
@@ -17,3 +19,4 @@ application/x-shellscript=userapp-sh -EAZ9X1.desktop;
 image/png=sxiv.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=openoffice4-writer.desktop;
 application/zip=org.kde.ark.desktop;
+text/plain=emacsclient.desktop;
